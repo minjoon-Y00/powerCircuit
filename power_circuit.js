@@ -5,8 +5,9 @@ class PowerCircuit {
 	}
 
 	initNode() {
-		this.ns.push({id: 0, marked: false, lv: 0});
+		this.ns = [];
 		this.es = [];
+		this.ns.push({id: 0, marked: false, lv: 0});
 	}
 
 	setPower2(power2) {
@@ -27,13 +28,13 @@ class PowerCircuit {
 		}
 		else if (pow2 === '1') {
 			this.ns.push({id: 1, marked: true, lv: 1});
-			this.es.push({origin: this.ns[1], terminus: this.ns[0], left: false, right: true});
+			this.es.push({origin: this.ns[1], terminus: this.ns[0]});
 		}
 		else if (pow2 === '2') {
 			this.ns.push({id: 1, marked: false, lv: 1});
 			this.ns.push({id: 2, marked: true, lv: 2});
-			this.es.push({origin: this.ns[1], terminus: this.ns[0], left: false, right: true});
-			this.es.push({origin: this.ns[2], terminus: this.ns[1], left: false, right: true});
+			this.es.push({origin: this.ns[1], terminus: this.ns[0]});
+			this.es.push({origin: this.ns[2], terminus: this.ns[1]});
 		}
 
 		const dec = pow2;
@@ -45,6 +46,6 @@ class PowerCircuit {
 	}
 
 	getNodeEdge() {
-		return {ns: this.ns, es: this.es};
+		return {nodes: this.ns, edges: this.es};
 	}
 }
