@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Power Circuit</title>
+	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Architects+Daughter">
+	<link rel="stylesheet" href="./vendor/bootstrap-cyborg.min.css">
+	<link rel="stylesheet" href="ps.css">
+</head>
+
+<body>
+ <div class="container">
+ 	<h2 style="font-family:'Architects Daughter'">Power Circuit Modeler</h2>
+
+ 	
+ 	<graph>
+ 	</graph>
+
+  <input type="text" class="form-control" id="power2" placeholder="e.g. 2^(2^(2+1+0))" style="width: 1000px">
+  <input type="text" class="form-control" id="decimal" placeholder="e.g. 35" style="width: 1000px">
+  <br/>
+  <button type="button" id="drawBtn" class="btn btn-primary">Draw Circuit</button>
+
+
+ </div>
+</body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://d3js.org/d3.v4.min.js"></script>
+<!--<script src="./vendor/d3.min.js"></script>-->
+<script src="./power_circuit.js"></script>
+<script src="./ps.js"></script>
+
+</html>
